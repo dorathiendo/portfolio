@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+html, body {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/images/purty_wood.png');
+    background-attachment: fixed;
+    background-repeat: repeat;
+    font-family: 'Work Sans', sans-serif
+}
+
+a {
+    color: black;
+    text-decoration: none
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: white
+}
+
+header > * {
+    display: inline-block
+}
+
+header h1 {
+    margin: 10px;
+    text-align: center;
+    letter-spacing: .1em
+}
+
+nav {
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: .2em
+}
+
+nav a {
+    vertical-align: text-top;
+    margin: 20px
+}
+
+#main {
+    overflow: hidden
+}
+
+#main .section {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+#main .section:not(:first-child) {
+    margin-top: 250px
+}
+
+#main .section:not(:last-child) {
+    margin-bottom: 250px
+}
+
+#main .section .content {
+    height: 100%;
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    opacity: .7
+}
+
+#main .section .content:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1
+}
+
+#main .section .content .mobileDemo {
+    border: 30px solid transparent;
+    border-image: url(/images/iphone-6-glass-lens-frame-white-2.png) 100% stretch
+}
+
+#main .section .title {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    transition: all 1s cubic-bezier(.25, .8, .25, 1)
+}
+
+#main .section .title .title-wrapper {
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px
+}
+
+#main .section .title .title-wrapper h2 {
+    font-size: 5em;
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+    text-transform: uppercase
+}
+
+#main .section .title .title-wrapper .subTitle {
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    opacity: .6;
+    margin: 0 30px;
+    display: none
+}
+
+#main .section .title .title-wrapper .subTitle:before, #main .section .title .title-wrapper .subTitle:after {
+    content: '"'
+}
+
+#main .section .title.showAllLeft {
+    left: -100% !important
+}
+
+#main .section .title.showAllRight {
+    right: -100% !important
+}
+
+#main .section:nth-child(odd) .title {
+    right: 0;
+    -webkit-clip-path: polygon(49% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(49% 0, 100% 0, 100% 100%, 0 100%)
+}
+
+#main .section:nth-child(odd) .title .title-wrapper {
+    left: 0
+}
+
+#main .section:nth-child(even) .title {
+    text-align: right;
+    left: 0;
+    -webkit-clip-path: polygon(0 0, 49% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 49% 0, 100% 100%, 0 100%)
+}
+
+#main .section:nth-child(even) .title .title-wrapper {
+    right: 0
+}
+
+#main .section#intro .title > span {
+    text-align: right;
+    width: 100%;
+    font-size: 4.5em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase
+}
+
+#main .section#intro .title > span span {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/purty_wood.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.carousel .nextBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background: url(/images/arrow.png);
+    background-size: contain;
+    z-index: 2;
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.carousel .prevBtn {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background: url(/images/arrow.png);
+    background-size: contain;
+    z-index: 2
+}
+
+.carousel ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.carousel ul li {
+    transition: all 1s cubic-bezier(.25, .8, .25, 1);
+    overflow: hidden;
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.carousel ul li.active {
+    display: block
+}
