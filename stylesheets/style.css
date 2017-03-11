@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('/images/purty_wood.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../images/purty_wood.png);
     background-attachment: fixed;
     background-repeat: repeat;
     font-family: 'Work Sans', sans-serif
@@ -93,7 +93,7 @@ nav a {
 
 #main .section .content .mobileDemo {
     border: 30px solid transparent;
-    border-image: url(/images/iphone-6-glass-lens-frame-white-2.png) 100% stretch
+    border-image: url(../images/iphone-6-glass-lens-frame-white-2.png) 100% stretch
 }
 
 #main .section .title {
@@ -172,7 +172,7 @@ nav a {
 }
 
 #main .section#intro .title > span span {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/purty_wood.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/purty_wood.png');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
@@ -185,7 +185,7 @@ nav a {
     width: 50px;
     height: 50px;
     margin: 20px;
-    background: url(/images/arrow.png);
+    background: url(../images/arrow.png);
     background-size: contain;
     z-index: 2;
     -ms-transform: rotate(180deg);
@@ -201,7 +201,7 @@ nav a {
     width: 50px;
     height: 50px;
     margin: 20px;
-    background: url(/images/arrow.png);
+    background: url(../images/arrow.png);
     background-size: contain;
     z-index: 2
 }
